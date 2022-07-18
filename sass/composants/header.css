@@ -1,0 +1,12 @@
+.logo-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border: 2px solid red;
+}
+@media (max-width: 768px) {
+  .logo-header__img {
+    width: 200px;
+  }
+}/*# sourceMappingURL=header.css.map */
