@@ -1,10 +1,12 @@
 @import 'utils/_variables.scss';
+@import 'utils/mixins.scss';
 
 @import 'base/_base.scss';
 @import 'base/_typography.scss';
 
 
 @import 'composants/_header.scss';
-@import 'composants/form-recherche';
+@import 'composants/form-recherche.scss';
+@import 'composants/fonctionnement.scss';
 @import 'composants/_cartes.scss';
 @import 'composants/footer';

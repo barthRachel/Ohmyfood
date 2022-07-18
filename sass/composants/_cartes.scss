@@ -1,15 +1,9 @@
 .restaurants 
 {
-    background-color: $bg-colour;
+    background-color: $bg-color;
 
     @media (max-width : 768px) {
         padding: 20px;
-    }
-
-    &>h2
-    {
-        margin-bottom: 25px;
-        font-weight: 900;
     }
 
     &__carte
