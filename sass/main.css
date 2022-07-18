@@ -126,6 +126,7 @@ h1 {
 }
 .restaurants__carte-div-img {
   border-radius: 20px 20px 0 0;
+  height: 200px;
 }
 @media (max-width: 768px) {
   .restaurants__carte-div-img {
@@ -166,4 +167,26 @@ h1 {
     display: flex;
     align-items: center;
   }
+}
+
+.footer {
+  background-color: rgb(53, 53, 53);
+  padding-bottom: 25px;
+  padding-left: 25px;
+  color: white;
+  padding-top: 25px;
+}
+.footer__logo {
+  font-size: 25px;
+}
+.footer__liste {
+  list-style-type: none;
+  margin-top: 25px;
+}
+.footer__liste-element {
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+.footer__liste-element > i {
+  width: 20px;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,30 @@
+.footer
+{
+    background-color: $bg-footer;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    color: white;
+    padding-top: 25px;
+
+    &__logo
+    {
+        font-size: 25px;
+    }
+
+    &__liste
+    {
+        list-style-type: none;
+        margin-top: 25px;
+        
+        &-element
+        {
+            margin-bottom: 10px;
+            font-weight: bolder;
+
+            &>i
+            {
+                width: 20px;
+            }
+        }
+    }
+}
