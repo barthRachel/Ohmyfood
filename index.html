@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="sass/main.css"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
+        <script src="https://kit.fontawesome.com/684a7276bc.js" crossorigin="anonymous"></script>
         <title>Ohmyfood - Accueil</title>
         
     </head>
@@ -16,8 +17,10 @@
         </header>
 
         <form method="post" action="#" class="exploration-restaurant">
-            <i id="search_image" class="fas fa-map-marker-alt"></i>            
-            <input type="search">
+            <div class="exploration-restaurant__recherche">
+                <i id="search_image" class="fas fa-map-marker-alt"></i>            
+                <input class="exploration-restaurant__recherche-bar" type="search" placeholder="    Paris, Belville">
+            </div>
 
             <div class="exploration-restaurant__texte">
                 <h3>Réservez le menu qui vous convient</h3>
@@ -42,7 +45,7 @@
 
             <div class="fonctionnement__deguster">
 
-                <i class="fa fa-mobile" aria-hidden="true"></i>
+                <i class="fa-solid fa-store"></i>
                 <p>Dégustez au restaurant</p>
             </div>
 
@@ -50,9 +53,11 @@
 
         <section class="restaurants">
 
-            <a class="restaurants__carte">
-                <div class="restaurants__carte-img-boite">
-                    <img class="restaurants__carte-img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Une image de restaurant"/>
+            <h2>Restaurants</h2>
+
+            <a class="restaurants__carte" href="#">
+                <div class="restaurants__carte-div">
+                    <img class="restaurants__carte-div-img" src="images/restaurants/palette.jpg" alt="Une image de restaurant"/>
                 </div>
                 <div class="restaurants__carte-description">
                     <div class="restaurants__carte-description-titre">
@@ -60,11 +65,55 @@
                         <p>Ménilmontant</p>
                     </div>
                     <div class="restaurants__carte-description-like">
-                        <i class="fa fa fa-heart"></i>
+                        <i class="fa-regular fa-heart"></i>
                     </div>
                 </div>
             </a>
 
+            <a class="restaurants__carte" href="#">
+                <div class="restaurants__carte-div">
+                    <img class="restaurants__carte-div-img" src="images/restaurants/note.jpg" alt="Une image de restaurant"/>
+                </div>
+                <div class="restaurants__carte-description">
+                    <div class="restaurants__carte-description-titre">
+                        <h3>La note enchantée</h3>
+                        <p>Charonne</p>
+                    </div>
+                    <div class="restaurants__carte-description-like">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a class="restaurants__carte" href="#">
+                <div class="restaurants__carte-div">
+                    <img class="restaurants__carte-div-img" src="images/restaurants/francaise.jpg" alt="Une image de restaurant"/>
+                </div>
+                <div class="restaurants__carte-description">
+                    <div class="restaurants__carte-description-titre">
+                        <h3>A la française</h3>
+                        <p>Cité rouge</p>
+                    </div>
+                    <div class="restaurants__carte-description-like">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a class="restaurants__carte" href="#">
+                <div class="restaurants__carte-div">
+                    <img class="restaurants__carte-div-img" src="images/restaurants/delice.jpg" alt="Une image de restaurant"/>
+                </div>
+                <div class="restaurants__carte-description">
+                    <div class="restaurants__carte-description-titre">
+                        <h3>Le délice des sens</h3>
+                        <p>Folie-Méricourt</p>
+                    </div>
+                    <div class="restaurants__carte-description-like">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </a>
 
 
         </section>
