@@ -1,0 +1,72 @@
+.exploration-restaurant{
+
+    background-color: $bg-colour;
+    @media (max-width : 768px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid orange; 
+    }
+
+    &__recherche
+    {
+        @media (max-width: 768px){
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            width: 100%;
+            border: 2px solid green;
+            background-color: rgb(219, 219, 219);
+        }
+
+        &-bar
+        {
+            @media (max-width : 768px) {
+                height: 100%;
+                border: none;
+                background-color: rgb(219, 219, 219);
+            }
+
+            &::placeholder
+            {
+               @media (max-width : 768px){
+                font-weight: bold;
+                color: black;
+               }
+
+            }
+        }
+    }
+    &__texte
+    {
+        @media (max-width : 768px) {
+            display: flex;
+            flex-direction : column;
+            justify-content: center;
+            text-align: center;
+            width: 70%;
+        }
+
+        &>h3
+        {
+            @media (max-width : 768px){
+                font-weight: bold;
+                border: 2px solid yellow;
+                padding-top: 20px;
+            }
+        }
+
+        &>p
+        {
+            @media (max-width : 768px){
+                border: 2px solid green;
+                padding-top: 20px;
+            }
+        }
+    }
+
+
+}
