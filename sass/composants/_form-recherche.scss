@@ -2,11 +2,11 @@
 
     background-color: $bg-color;
     @media (max-width : 768px){
+        height: 430px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        border: 2px solid orange; 
+        margin-top: 3px;
     }
 
     &__recherche
@@ -18,8 +18,12 @@
             justify-content: center;
             height: 50px;
             width: 100%;
-            border: 2px solid green;
             background-color: rgb(219, 219, 219);
+        }
+
+        &>i
+        {
+            font-size: 20px;
         }
 
         &-bar
@@ -35,6 +39,7 @@
                @media (max-width : 768px){
                 font-weight: bold;
                 color: black;
+                font-size: 17px;
                }
 
             }
@@ -54,16 +59,16 @@
         {
             @media (max-width : 768px){
                 font-weight: bold;
-                border: 2px solid yellow;
-                padding-top: 20px;
+                margin-top: 50px;
+                font-size: 30px;
             }
         }
 
         &>p
         {
             @media (max-width : 768px){
-                border: 2px solid green;
-                padding-top: 20px;
+                margin-top: 25px;
+                font-size: 18px;
             }
         }
     }
