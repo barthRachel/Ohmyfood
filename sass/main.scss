@@ -6,7 +6,8 @@
 
 
 @import 'composants/_header.scss';
-@import 'composants/form-recherche.scss';
-@import 'composants/fonctionnement.scss';
+@import 'composants/_form-recherche.scss';
+@import 'composants/_fonctionnement.scss';
+@import 'composants/_loading.scss';
 @import 'composants/_cartes.scss';
-@import 'composants/footer';
+@import 'composants/_footer';

@@ -58,7 +58,8 @@
         &>h3
         {
             @media (max-width : 768px){
-                font-weight: bold;
+                //font-family: 'Roboto';
+                font-weight: 700;
                 margin-top: 50px;
                 font-size: 30px;
             }
@@ -78,8 +79,10 @@
 
         &:hover
         {
-            cursor: pointer;
+            @include btn_hover;
         }
+
+
     }
 
 

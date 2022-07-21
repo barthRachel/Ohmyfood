@@ -1,5 +1,8 @@
+$duration : 4s;
+
 .restaurants 
 {
+    animation: fin-chargement 0ms $duration both;
     background-color: $bg-color;
 
     @media (max-width : 768px) {
@@ -11,17 +14,9 @@
         text-decoration: none;
         color: black;
 
-
         @media (max-width : 768px) {
-            margin-bottom: 20px;
+            //margin-bottom: 20px;
         }
-
-
-
-
-
-
-
 
         &-new
         {
@@ -31,7 +26,7 @@
             border-radius: 4px;
             background-color: $color-tertiary;
             font-weight: bold;
-            // color: darken($color-tertiary, $amount: 70);*
+            color: darken($color-tertiary, 40%);
             z-index: 10;
             position: relative;
             top: 40px;
@@ -70,6 +65,7 @@
              width: 100%;  
              display: flex;
              justify-content: space-between;
+             align-items: center;
              padding-top: 10px;
              padding-bottom: 10px;
              margin-bottom: 15px;
@@ -80,17 +76,76 @@
                     padding-left: 20px;
                 }
             }
+
             &-like{
-            @media (max-width: 768px) {
-                padding-right: 20px;
-                font-size: 25px;
-                display: flex;
-                align-items: center;
-            }
-                
+                @media (max-width: 768px) {
+                    margin-right: 20px;
+                    font-size: 25px;
+                    width: 25px;
+                    height: 25px;
+                    display: flex;
+                    align-items: center;
+                    
+                    &> .fa-regular
+                    {
+                        color: grey;
+                        display: block;
+                    }
+
+                    &> .fa-solid
+                    {
+                        display: none;
+                    }
+                }
+
+                @media (min-width : 993px) {
+                    &> .fa-regular
+                {
+                    color: $color-secondary;
+                    display: block;
+                }
+
+                &> .fa-solid
+                {
+                    display: none;
+                    color: $color-secondary;
+
+                    transition: color 700ms, transform 700ms;  
+
+                    &:hover
+                    {
+                        @include like_hover_desktop;
+                    }
+
+                }
+
+                &:hover
+                {                    
+                    &>.fa-regular
+                    {
+                        display: none;
+                    }
+
+                    &>.fa-solid
+                    {
+                        display: block;
+                    }
+                }
+                    
+                } 
             }
 
         }
 
+    }
+}
+
+
+@keyframes fin-chargement {
+    0% {
+        transform: translateX(-9999px);
+    }
+    100% {
+        transform: translateX(0) translateY(-70px);
     }
 }
