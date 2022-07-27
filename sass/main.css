@@ -254,11 +254,10 @@ h2 {
   }
 }
 .restaurants {
-  -webkit-animation: fin-chargement 0ms 4s both;
-          animation: fin-chargement 0ms 4s both;
   background-color: rgb(241, 241, 241);
   text-align: center;
   width: 100%;
+  margin-bottom: 40px;
 }
 @media (max-width: 768px) {
   .restaurants {
@@ -272,6 +271,7 @@ h2 {
 @media (max-width: 768px) {
   .restaurants__boite {
     flex-direction: column;
+    justify-content: space-between;
   }
 }
 .restaurants__boite-carte {
@@ -282,6 +282,7 @@ h2 {
 @media (max-width: 768px) {
   .restaurants__boite-carte {
     width: 100%;
+    margin-bottom: -30px;
   }
 }
 .restaurants__boite-carte-new {
@@ -291,15 +292,27 @@ h2 {
   border-radius: 4px;
   padding: 5px;
   z-index: 10;
-  position: absolute;
-  width: 5%;
+  position: relative;
+  width: 85px;
+  top: 15%;
+  left: 73%;
+  /*@media (max-width : 1024px) {
+      left: 50%;
+  }
+
+  @media (max-width : 1440px) {
+      left: 62%;
+  }*/
 }
 @media (max-width: 768px) {
   .restaurants__boite-carte-new {
     position: relative;
-    top: 40px;
-    left: 75%;
+    top: 45px;
+    left: 70%;
   }
+}
+.restaurants__boite-carte-new#new3, .restaurants__boite-carte-new#new4 {
+  z-index: 0;
 }
 .restaurants__boite-carte-div {
   width: 100%;
@@ -375,23 +388,15 @@ h2 {
   }
 }
 
-@-webkit-keyframes fin-chargement {
-  0% {
-    transform: translateX(-9999px);
-  }
-  100% {
-    transform: translateX(0) translateY(-70px);
-  }
+/*@keyframes fin-chargement {
+    0% {
+        transform: translateX(-9999px);
+    }
+    100% {
+        transform: translateX(0) translateY(-70px);
+    }
 }
-
-@keyframes fin-chargement {
-  0% {
-    transform: translateX(-9999px);
-  }
-  100% {
-    transform: translateX(0) translateY(-70px);
-  }
-}
+*/
 .footer {
   text-align: center;
   background-color: rgb(53, 53, 53);
@@ -429,11 +434,6 @@ h2 {
   height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
-}
-@media (max-width: 768px) {
-  .menu__img > img {
-    height: 100%;
-  }
 }
 .menu__choix {
   background-color: rgb(241, 241, 241);
@@ -499,7 +499,10 @@ h2 {
   margin-top: 15px;
   cursor: pointer;
   overflow: hidden;
-  transition: padding-right 450ms ease-in-out;
+  /*&:hover
+  {
+      //padding-right: 15%;
+  }*/
 }
 .menu__choix-container-box-elmt-titre-desc {
   width: 100%;
@@ -544,9 +547,6 @@ h2 {
   background-color: #99E2D0;
   color: white;
   border-radius: 0 20px 20px 0;
-}
-.menu__choix-container-box-elmt:hover {
-  padding-right: 15%;
 }
 .menu__choix-container-box-elmt:hover .menu__choix-container-box-elmt-selection {
   cursor: pointer;

@@ -2,10 +2,11 @@ $duration : 4s;
 
 .restaurants 
 {
-    animation: fin-chargement 0ms $duration both;
+    //animation: fin-chargement 0ms $duration both;
     background-color: $bg-color;
     text-align: center;
     width: 100%;
+    margin-bottom: 40px;
 
     @media (max-width : $mobile) {
         padding: 20px;
@@ -18,6 +19,7 @@ $duration : 4s;
 
         @media (max-width : $mobile) {
             flex-direction: column;
+            justify-content: space-between;
         }
 
         &-carte
@@ -28,6 +30,7 @@ $duration : 4s;
     
             @media (max-width : $mobile) {
                 width: 100%;
+                margin-bottom: -30px;
             }
     
             &-new
@@ -38,15 +41,29 @@ $duration : 4s;
                 border-radius: 4px;
                 padding: 5px;
                 z-index: 10;
-                position: absolute;
-                width: 5%;
-                //top: 40px;
+                position: relative;
+                width: 85px;
+                top: 15%;
+                left: 73%;
 
                 @media (max-width : $mobile) {
                     position: relative;
-                    top: 40px;
-                    left: 75%;    
+                    top: 45px;
+                    left: 70%;    
                 }
+
+                /*@media (max-width : 1024px) {
+                    left: 50%;
+                }
+
+                @media (max-width : 1440px) {
+                    left: 62%;
+                }*/
+            }
+
+            &-new#new3, &-new#new4
+            {
+                z-index: 0;
             }
     
             &-div
@@ -164,7 +181,7 @@ $duration : 4s;
 }
 
 
-@keyframes fin-chargement {
+/*@keyframes fin-chargement {
     0% {
         transform: translateX(-9999px);
     }
@@ -172,3 +189,4 @@ $duration : 4s;
         transform: translateX(0) translateY(-70px);
     }
 }
+*/
