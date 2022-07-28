@@ -15,11 +15,37 @@ $duration : 4s;
     &__boite
     {  
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
 
         @media (max-width : $mobile) {
             flex-direction: column;
             justify-content: space-between;
+        }
+
+        @media (max-width : $tablette) {
+        }
+
+        border: 2px solid blue;
+
+        &-separateur
+        {
+            border: 2px solid red;
+            margin: 20px;
+            width: 25%;
+
+            @media (max-width : $mobile) {
+                width: 100%;
+                margin: 0;
+            }
+
+            @media (max-width : $tablette) and (min-width : 768px) {
+                width: 50%;
+            }
+
+            @media (max-width : 1215px) and (min-width : 993px) {
+                width: 50%;
+            }
+
         }
 
         &-carte
@@ -43,15 +69,18 @@ $duration : 4s;
                 z-index: 10;
                 position: relative;
                 width: 85px;
-                top: 15%;
-                left: 73%;
+                top: 8%;
+                left: 78%;
 
                 @media (max-width : $mobile) {
-                    position: relative;
                     top: 45px;
                     left: 70%;    
                 }
 
+                @media (max-width : $tablette) and (min-width : 768px) {
+                   top: 8%;
+                   left: 68%; 
+                }
                 /*@media (max-width : 1024px) {
                     left: 50%;
                 }
