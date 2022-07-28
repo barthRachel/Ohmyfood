@@ -33,16 +33,11 @@ h2 {
 .logo-header__img {
   width: 200px;
 }
-@media (max-width: 768px) {
-  .logo-header__img {
-    width: 200px;
-  }
-}
 .logo-header-retour {
   position: relative;
   right: 35%;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .logo-header-retour {
     position: relative;
     left: -20%;
@@ -61,7 +56,7 @@ h2 {
   align-items: center;
   margin-top: 3px;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .exploration-restaurant {
     height: 430px;
   }
@@ -143,9 +138,14 @@ h2 {
   text-align: center;
   padding-bottom: 30px;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .fonctionnement {
     padding: 20px;
+  }
+}
+@media (max-width: 992px) {
+  .fonctionnement {
+    padding-bottom: 20px;
   }
 }
 .fonctionnement__liste-boite {
@@ -154,9 +154,16 @@ h2 {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .fonctionnement__liste-boite {
+    display: flex;
     flex-direction: column;
+  }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  .fonctionnement__liste-boite {
+    flex-wrap: wrap;
+    height: 200px;
   }
 }
 .fonctionnement__liste-boite-elmt {
@@ -164,7 +171,7 @@ h2 {
   align-items: center;
   margin-right: 15px;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .fonctionnement__liste-boite-elmt {
     justify-content: center;
     margin-bottom: 15px;
@@ -197,7 +204,7 @@ h2 {
   position: relative;
   left: 3%;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .fonctionnement__liste-boite-elmt-digit {
     display: flex;
     align-items: center;
@@ -259,19 +266,41 @@ h2 {
   width: 100%;
   margin-bottom: 40px;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .restaurants {
     padding: 20px;
   }
 }
 .restaurants__boite {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  border: 2px solid blue;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .restaurants__boite {
     flex-direction: column;
     justify-content: space-between;
+  }
+}
+.restaurants__boite-separateur {
+  border: 2px solid red;
+  margin: 20px;
+  width: 25%;
+}
+@media (max-width: 767px) {
+  .restaurants__boite-separateur {
+    width: 100%;
+    margin: 0;
+  }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  .restaurants__boite-separateur {
+    width: 50%;
+  }
+}
+@media (max-width: 1215px) and (min-width: 993px) {
+  .restaurants__boite-separateur {
+    width: 50%;
   }
 }
 .restaurants__boite-carte {
@@ -279,7 +308,7 @@ h2 {
   color: black;
   width: 20%;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .restaurants__boite-carte {
     width: 100%;
     margin-bottom: -30px;
@@ -294,8 +323,8 @@ h2 {
   z-index: 10;
   position: relative;
   width: 85px;
-  top: 15%;
-  left: 73%;
+  top: 8%;
+  left: 78%;
   /*@media (max-width : 1024px) {
       left: 50%;
   }
@@ -304,11 +333,16 @@ h2 {
       left: 62%;
   }*/
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .restaurants__boite-carte-new {
-    position: relative;
     top: 45px;
     left: 70%;
+  }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  .restaurants__boite-carte-new {
+    top: 8%;
+    left: 68%;
   }
 }
 .restaurants__boite-carte-new#new3, .restaurants__boite-carte-new#new4 {
@@ -340,7 +374,7 @@ h2 {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .restaurants__boite-carte-description {
     margin-bottom: 15px;
   }
@@ -378,7 +412,7 @@ h2 {
 .restaurants__boite-carte-description-like:hover > .fa-solid {
   display: block;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .restaurants__boite-carte-description-like > .fa-regular {
     color: grey;
     display: block;
@@ -405,7 +439,7 @@ h2 {
   color: white;
   padding-top: 25px;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .footer {
     text-align: start;
   }
@@ -441,8 +475,12 @@ h2 {
   border-radius: 30px 30px 0 0;
   position: relative;
   top: -55px;
+  /*@media (max-width : $tablette) and (min-width : 768px) {
+      flex-direction: column;
+      align-items: center;
+  }*/
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .menu__choix {
     display: flex;
     flex-direction: column;
@@ -467,11 +505,25 @@ h2 {
   padding: 0;
   display: flex;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .menu__choix-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    flex-direction: column;
+  }
+}
+@media (max-width: 992px) and (min-width: 768px) {
   .menu__choix-container {
     margin: 0;
     padding: 0;
     flex-direction: column;
+  }
+}
+@media (min-width: 993px) and (max-width: 1215px) {
+  .menu__choix-container {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 .menu__choix-container-box {
@@ -479,6 +531,11 @@ h2 {
   width: 100%;
   height: 100%;
   padding: 20px;
+}
+@media (min-width: 993px) and (max-width: 1215px) {
+  .menu__choix-container-box {
+    width: 80%;
+  }
 }
 .menu__choix-container-box > h3 {
   text-align: start;
@@ -505,7 +562,7 @@ h2 {
   }*/
 }
 .menu__choix-container-box-elmt-titre-desc {
-  width: 100%;
+  width: 85%;
   margin: 0;
   padding: 15px;
   /* haut | droit | bas | gauche */
@@ -522,9 +579,9 @@ h2 {
   display: flex;
   justify-content: space-between;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .menu__choix-container-box-elmt-titre-desc-boite {
-    max-width: 768px;
+    max-width: 767px;
   }
 }
 .menu__choix-container-box-elmt-titre-desc-boite > p {
@@ -552,7 +609,7 @@ h2 {
   cursor: pointer;
 }
 .menu__choix-btn {
-  width: 15%;
+  width: 20%;
   margin-bottom: 50px;
   padding: 20px;
   border-radius: 30px;
@@ -564,7 +621,17 @@ h2 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: background-color 400ms, box-shadow 400ms, transform 400ms;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .menu__choix-btn {
+    width: 50%;
+  }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  .menu__choix-btn {
+    width: 50%;
+  }
+}
+@media (max-width: 1215px) and (min-width: 993px) {
   .menu__choix-btn {
     width: 50%;
   }

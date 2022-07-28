@@ -6,7 +6,7 @@
     align-items: center;
     margin-top: 3px;
 
-    @media (max-width : 768px){
+    @media (max-width : $mobile){
         height: 430px;
     }
 
