@@ -58,10 +58,20 @@
                     padding-left: 15px;
                     padding-right: 30px;
                     color: grey;
-                    @media (max-width : $mobile) {
 
+                    //Animation pour le fonctionnement
+                    transition: background-color 400ms, box-shadow 400ms, transform 400ms;
+                }
+
+                &:hover
+                {
+                    background-color: lighten($color-primary,34%);
+
+                    &>i
+                    {
+                        color: $color-primary;
                     }
-                } 
+                }
             }
 
             &-digit
@@ -91,9 +101,4 @@
             }
         }
     }
-}
-
-#store
-{
-    color: $color-primary;
 }
