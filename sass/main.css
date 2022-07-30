@@ -191,6 +191,13 @@ h2 {
   padding-left: 15px;
   padding-right: 30px;
   color: grey;
+  transition: background-color 400ms, box-shadow 400ms, transform 400ms;
+}
+.fonctionnement__liste-boite-elmt-description:hover {
+  background-color: #efe6fa;
+}
+.fonctionnement__liste-boite-elmt-description:hover > i {
+  color: #9356DC;
 }
 .fonctionnement__liste-boite-elmt-digit {
   display: flex;
@@ -217,10 +224,6 @@ h2 {
     position: relative;
     left: 3%;
   }
-}
-
-#store {
-  color: #9356DC;
 }
 
 .loading {
@@ -274,7 +277,6 @@ h2 {
 .restaurants__boite {
   display: flex;
   justify-content: center;
-  border: 2px solid blue;
 }
 @media (max-width: 767px) {
   .restaurants__boite {
@@ -283,7 +285,6 @@ h2 {
   }
 }
 .restaurants__boite-separateur {
-  border: 2px solid red;
   margin: 20px;
   width: 25%;
 }
@@ -485,7 +486,6 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid red;
   }
 }
 .menu__choix-titre {
@@ -500,7 +500,6 @@ h2 {
   font-size: 30px;
 }
 .menu__choix-container {
-  border: 2px solid red;
   margin: 0;
   padding: 0;
   display: flex;
@@ -527,7 +526,6 @@ h2 {
   }
 }
 .menu__choix-container-box {
-  border: 2px solid orange;
   width: 100%;
   height: 100%;
   padding: 20px;
