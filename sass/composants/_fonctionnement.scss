@@ -65,6 +65,7 @@
 
                 &:hover
                 {
+                    cursor: pointer;
                     background-color: lighten($color-primary,34%);
 
                     &>i
@@ -86,6 +87,7 @@
                 height: 25px;
                 position: relative;
                 left: 3%;
+
                 @media (max-width : $mobile) {
                     display: flex;
                     align-items: center;
@@ -97,6 +99,11 @@
                     height: 25px;
                     position: relative;
                     left: 3%;
+                }
+
+                &:hover
+                {
+                    cursor: pointer;
                 }
             }
         }

@@ -186,6 +186,20 @@
                     }
                 }
 
+                &.entrees
+                {
+                    animation: arrivee 2s ease-in-out;
+                }
+
+                &.plats
+                {
+                    animation: arrivee 4s ease-in-out;
+                }
+
+                &.desserts
+                {
+                    animation: arrivee 6s ease-in-out;
+                }
             }
         }
 
@@ -214,3 +228,12 @@
         }
     }
 }
+
+@keyframes arrivee {
+    from {
+      opacity:0;
+    }
+    to {
+      opacity:1;
+    }
+  }
