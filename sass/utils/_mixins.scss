@@ -2,25 +2,18 @@
     padding: 20px;
     border-radius: 30px;
     font-size: 18px;
-    background-color: $color-primary;
+    background: linear-gradient($color-secondary, $color-primary);
     color: white;
     margin-top : 40px;
     border: 0px ;
     box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);
 
-    transition: background-color 400ms, box-shadow 400ms, transform 400ms;
+    transition: box-shadow 400ms, transform 400ms;
 }
 
 @mixin btn_hover {
 
     cursor: pointer;
-    background-color: $color-secondary; 
+    background: linear-gradient($secondary-light, $primary-light); 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 }
-
-@mixin like_hover_desktop {
-    cursor: pointer;
-    color: $color-primary;
-}
-
-//remplir en dégradé du rose au violet

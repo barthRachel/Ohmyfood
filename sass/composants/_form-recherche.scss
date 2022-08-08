@@ -1,5 +1,4 @@
 .exploration-restaurant{
-
     background-color: $bg-color;
     display: flex;
     flex-direction: column;
@@ -19,7 +18,6 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-
 
         &>i
         {
@@ -68,6 +66,7 @@
             }
         }
     }
+
     &__btn
     {
         @include btn;
@@ -77,9 +76,5 @@
         {
             @include btn_hover;
         }
-
-
     }
-
-
 }
