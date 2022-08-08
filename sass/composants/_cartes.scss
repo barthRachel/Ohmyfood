@@ -1,151 +1,168 @@
-$duration : 4s;
-
 .restaurants 
 {
-    animation: fin-chargement 0ms $duration both;
     background-color: $bg-color;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
 
-    @media (max-width : 768px) {
+    @media (max-width : $mobile) {
         padding: 20px;
     }
 
-    &__carte
-    {
-        text-decoration: none;
-        color: black;
+    &__boite
+    {  
+        display: flex;
+        justify-content: center;
 
-        @media (max-width : 768px) {
-            //margin-bottom: 20px;
+        @media (max-width : $mobile) {
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        &-new
+        &-separateur
         {
-            width: 20%;
-            text-align: center;
-            padding: 3px;
-            border-radius: 4px;
-            background-color: $color-tertiary;
-            font-weight: bold;
-            color: darken($color-tertiary, 40%);
-            z-index: 10;
-            position: relative;
-            top: 40px;
-            left: 75%;
-        }
+            margin: 20px;
+            width: 25%;
 
-        &-div
-        {
-            @media (max-width : 768px) {
+            @media (max-width : $mobile) {
                 width: 100%;
+                margin: 0;
             }
 
-            &-img{
-                border-radius: 20px 20px 0 0;
-                height: 200px;
-                @media (max-width : 768px) {
+            @media (max-width : $tablette) and (min-width : 768px) {
+                width: 50%;
+            }
+
+            @media (max-width : 1215px) and (min-width : 993px) {
+                width: 50%;
+            }
+        }
+
+        &-carte
+        {
+            text-decoration: none;
+            color: black;
+            width: 20%;
+    
+            @media (max-width : $mobile) {
+                width: 100%;
+                margin-bottom: -30px;
+            }
+    
+            &-new
+            {
+                background-color: $color-tertiary;
+                color: darken($color-tertiary, 40%);
+                font-weight: bold;
+                border-radius: 4px;
+                padding: 5px;
+                z-index: 10;
+                position: relative;
+                width: 85px;
+                top: 8%;
+                left: 78%;
+
+                @media (max-width : $mobile) {
+                    top: 45px;
+                    left: 70%;    
+                }
+
+                @media (max-width : $tablette) and (min-width : 768px) {
+                   top: 8%;
+                   left: 68%; 
+                }
+            }
+
+            &-new#new3, &-new#new4
+            {
+                z-index: 0;
+            }
+    
+            &-div
+            {
+                width: 100%;
+    
+                &-img{
+                    border-radius: 20px 20px 0 0;
+                    height: 200px;
                     position: relative;
                     width: 100%;
-                    height: 200px ;
+                    height: 200px;
                     max-height: 100%;
-                    object-fit: cover;
+                    object-fit: cover;   
                 }
-
             }
-        }
-
-        &-description 
-        {
-            background-color: white;
-            border-radius: 0 0 20px 20px ;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-
-            @media (max-width : 768px) {
-             position: relative;
-             top : -10px; 
-             width: 100%;  
-             display: flex;
-             justify-content: space-between;
-             align-items: center;
-             padding-top: 10px;
-             padding-bottom: 10px;
-             margin-bottom: 15px;
-            }
-
-            &-titre{
-                @media (max-width: 768px) {
+    
+            &-description 
+            {
+                background-color: white;
+                border-radius: 0 0 20px 20px ;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+                position: relative;
+                top : -10px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                
+                @media (max-width : $mobile) {
+                 margin-bottom: 15px;
+                }
+    
+                &-titre{
+                    display: flex;
+                    flex-direction: column;
                     padding-left: 20px;
+                    align-items: flex-start;
                 }
-            }
-
-            &-like{
-                @media (max-width: 768px) {
+    
+                &-like{
                     margin-right: 20px;
                     font-size: 25px;
                     width: 25px;
                     height: 25px;
                     display: flex;
                     align-items: center;
-                    
+
                     &> .fa-regular
                     {
-                        color: grey;
-                        display: block;
+                        color: black;
+                        opacity: 1;
+                        visibility: visible;
+
+                        transition: visibility 0s 0s, opacity 0.25s;
                     }
 
                     &> .fa-solid
                     {
-                        display: none;
+                        opacity: 0;
+                        visibility: hidden;
+                        background: linear-gradient($color-secondary, $color-primary);
+                        background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        position: relative;
+                        left: -100%;
+                        transition: visibility 0s 0s, opacity 1s;
                     }
-                }
-
-                @media (min-width : 993px) {
-                    &> .fa-regular
-                {
-                    color: $color-secondary;
-                    display: block;
-                }
-
-                &> .fa-solid
-                {
-                    display: none;
-                    color: $color-secondary;
-
-                    transition: color 700ms, transform 700ms;  
 
                     &:hover
                     {
-                        @include like_hover_desktop;
-                    }
+                        &>.fa-regular
+                        {
+                            visibility: hidden;
+                            opacity: 0;
+                        }
 
-                }
-
-                &:hover
-                {                    
-                    &>.fa-regular
-                    {
-                        display: none;
-                    }
-
-                    &>.fa-solid
-                    {
-                        display: block;
+                        &>.fa-solid
+                        {
+                            visibility: visible;
+                            opacity: 1;
+                        }
                     }
                 }
-                    
-                } 
             }
-
         }
-
-    }
-}
-
-
-@keyframes fin-chargement {
-    0% {
-        transform: translateX(-9999px);
-    }
-    100% {
-        transform: translateX(0) translateY(-70px);
     }
 }

@@ -1,15 +1,30 @@
-
 .logo-header{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 70px;
-
+    background-color: white;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    
     &__img{
-        @media (max-width : 768px){
-            width: 200px;
-        }
+        width: 200px;
     }
 
+    &-retour
+    {
+        position: relative;
+        right: 35%;
+
+        @media (max-width : $mobile) {
+            position: relative;
+            left: -20%;
+            right: 0;
+        }
+
+        &>i
+        {
+            font-size: 20px;
+            color: black;
+        }    
+    }
 }

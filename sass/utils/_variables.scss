@@ -1,11 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap'); //font Roboto
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap'); //font Shrikhand
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap'); //font Roboto Bold
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap'); //font Roboto
 
 $color-primary : #9356DC ;
 $color-secondary : #FF79DA ;
 $color-tertiary : #99E2D0 ;
 
+$primary-light : lighten($color-primary, 4%);
+$secondary-light : lighten($color-secondary, 4%);
+
 
 $bg-color : rgb(241, 241, 241);
 $bg-footer : rgb(53,53,53);
+
+$mobile : 767px;
+$tablette : 992px;

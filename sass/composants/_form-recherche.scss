@@ -1,25 +1,23 @@
 .exploration-restaurant{
-
     background-color: $bg-color;
-    @media (max-width : 768px){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3px;
+
+    @media (max-width : $mobile){
         height: 430px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 3px;
     }
 
     &__recherche
     {
-        @media (max-width: 768px){
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            height: 50px;
-            width: 100%;
-            background-color: rgb(219, 219, 219);
-        }
+        display: flex;
+        background-color: rgb(219, 219, 219);
+        height: 50px;            
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
 
         &>i
         {
@@ -28,41 +26,36 @@
 
         &-bar
         {
-            @media (max-width : 768px) {
-                height: 100%;
-                border: none;
-                background-color: rgb(219, 219, 219);
-            }
+            height: 100%;
+            border: none;
+            background-color: rgb(219, 219, 219);
 
             &::placeholder
             {
-               @media (max-width : 768px){
                 font-weight: bold;
                 color: black;
                 font-size: 17px;
-               }
-
             }
         }
     }
+
     &__texte
     {
+        display: flex;
+        flex-direction : column;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+
         @media (max-width : 768px) {
-            display: flex;
-            flex-direction : column;
-            justify-content: center;
-            text-align: center;
             width: 70%;
         }
 
         &>h3
         {
-            @media (max-width : 768px){
-                //font-family: 'Roboto';
-                font-weight: 700;
-                margin-top: 50px;
-                font-size: 30px;
-            }
+            font-weight: 700;
+            margin-top: 50px;
+            font-size: 30px;
         }
 
         &>p
@@ -73,17 +66,15 @@
             }
         }
     }
+
     &__btn
     {
         @include btn;
+        margin-bottom: 40px;
 
         &:hover
         {
             @include btn_hover;
         }
-
-
     }
-
-
 }
