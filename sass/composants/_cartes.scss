@@ -4,7 +4,6 @@
     text-align: center;
     width: 100%;
     margin-bottom: 40px;
-    z-index: 0;
 
     @media (max-width : $mobile) {
         padding: 20px;
@@ -113,6 +112,7 @@
                 }
     
                 &-titre{
+
                     display: flex;
                     flex-direction: column;
                     padding-left: 20px;
@@ -131,11 +131,13 @@
                     &> .fa-solid
                     {
                         @include btn_like_solid;
+
                     }
 
                     &:hover
                     {
                         @include btn_like_hover;
+
                     }
                 }
             }

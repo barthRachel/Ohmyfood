@@ -289,6 +289,7 @@ h2 {
   100% {
     opacity: 0;
     pointer-events: none;
+
   }
 }
 @keyframes loader {
@@ -301,6 +302,7 @@ h2 {
   100% {
     opacity: 0;
     pointer-events: none;
+
   }
 }
 .restaurants {
@@ -308,7 +310,6 @@ h2 {
   text-align: center;
   width: 100%;
   margin-bottom: 40px;
-  z-index: 0;
 }
 @media (max-width: 767px) {
   .restaurants {
@@ -552,6 +553,7 @@ h2 {
 .menu__choix-like:hover > .fa-solid {
   visibility: visible;
   opacity: 1;
+
 }
 .menu__choix-container {
   margin: 0;
