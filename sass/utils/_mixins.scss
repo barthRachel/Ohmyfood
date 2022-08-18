@@ -1,3 +1,4 @@
+//Mixins concernant les boutons commandes
 @mixin btn {
     padding: 20px;
     border-radius: 30px;
@@ -16,4 +17,49 @@
     cursor: pointer;
     background: linear-gradient($secondary-light, $primary-light); 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+//Mixins concernant les bouton like et les animations correspondantes
+@mixin btn_like {
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 25px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+}
+
+@mixin btn_like_regular {
+    color: black;
+    opacity: 1;
+    visibility: visible;
+
+    transition: visibility 0s 0s, opacity 0.25s;
+}
+
+@mixin btn_like_solid {
+    opacity: 0;
+    visibility: hidden;
+    background: linear-gradient($color-secondary, $color-primary);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    left: -100%;
+
+    transition: visibility 0s 0s, opacity 1s;
+}
+
+@mixin btn_like_hover {
+    &>.fa-regular
+    {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    &>.fa-solid
+    {
+        visibility: visible;
+        opacity: 1;
+    }
 }

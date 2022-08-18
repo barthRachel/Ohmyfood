@@ -4,6 +4,7 @@
     text-align: center;
     width: 100%;
     margin-bottom: 40px;
+    z-index: 0;
 
     @media (max-width : $mobile) {
         padding: 20px;
@@ -119,47 +120,22 @@
                 }
     
                 &-like{
-                    margin-right: 20px;
-                    font-size: 25px;
-                    width: 25px;
-                    height: 25px;
-                    display: flex;
-                    align-items: center;
+                    
+                    @include btn_like;
 
                     &> .fa-regular
                     {
-                        color: black;
-                        opacity: 1;
-                        visibility: visible;
-
-                        transition: visibility 0s 0s, opacity 0.25s;
+                        @include btn_like_regular;
                     }
 
                     &> .fa-solid
                     {
-                        opacity: 0;
-                        visibility: hidden;
-                        background: linear-gradient($color-secondary, $color-primary);
-                        background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                        position: relative;
-                        left: -100%;
-                        transition: visibility 0s 0s, opacity 1s;
+                        @include btn_like_solid;
                     }
 
                     &:hover
                     {
-                        &>.fa-regular
-                        {
-                            visibility: hidden;
-                            opacity: 0;
-                        }
-
-                        &>.fa-solid
-                        {
-                            visibility: visible;
-                            opacity: 1;
-                        }
+                        @include btn_like_hover;
                     }
                 }
             }
